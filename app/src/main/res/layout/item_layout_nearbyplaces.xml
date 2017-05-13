@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/supermarketName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="2"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:text="SuperMarket Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black_85"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/vicinity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="2"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:text="Vicinity" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/supermarketIcon"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2.5"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <!--<ImageView-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:src="@drawable/map_marker" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/txtDistance"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingEnd="10dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:paddingStart="10dp"-->
+            <!--android:text="1Km" />-->
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="5dp"
+                app:srb_fillColor="@android:color/holo_blue_dark"
+                app:srb_numberOfStars="5"
+                app:srb_starSize="15dp"
+                app:srb_stepSize="0.5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

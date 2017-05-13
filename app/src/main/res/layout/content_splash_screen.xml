@@ -30,7 +30,7 @@
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
         android:background="@drawable/md_transparent"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/icon_sweet" />
 
     <TextView
         style="@style/TextAppearance.AppCompat.Medium"
@@ -40,7 +40,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="Enjoy the games"
+        android:text="Enjoy the App"
         android:textColor="@color/black_85"
         android:textStyle="bold" />
 

@@ -6,14 +6,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
+import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntro2;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 import com.muusa.sweetaroma.R;
+import com.muusa.sweetaroma.utils.SampleSlide;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import static com.muusa.sweetaroma.utils.AppConfig.FIRST_RUN;
 
-public class TutorialsActivity extends AppIntro2 {
+public class TutorialsActivity extends AppIntro {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +25,18 @@ public class TutorialsActivity extends AppIntro2 {
             startActivity(new Intent(TutorialsActivity.this, SplashScreen.class));
             finish();
         }
-        //setContentView(R.layout.activity_custom_typeface);
-        addSlide(AppIntroFragment.newInstance("Get all the best soccer games.", "Within a short time", R.drawable.naivasha_hippo, Color.parseColor("#27ae60")));
-        addSlide(AppIntroFragment.newInstance("Get a list of all the categories in each country.", "Choose easily from the list' Countries' Categories", R.drawable.samburu_beautiful, Color.parseColor("#34495e")));
-        addSlide(AppIntroFragment.newInstance("View all the matches in the countries.", "Have a Glimpse of all matches odds a Country Offers", R.drawable.samburu_beautiful, Color.parseColor("#c0392b")));
-        addSlide(AppIntroFragment.newInstance("Fill your details and make the payment.", "Experience This Smart Revolutionary Shopping With Karibu pay in your hands", R.drawable.rwanda_backets, Color.parseColor("#27ae60")));
+
+        // Add your slide fragments here.
+        // AppIntro will automatically generate the dots indicator and buttons.
+        addSlide(SampleSlide.newInstance(R.layout.intro_welcome));
+        addSlide(SampleSlide.newInstance(R.layout.intro_employees));
+        addSlide(SampleSlide.newInstance(R.layout.intro_employers));
+        addSlide(SampleSlide.newInstance(R.layout.intro_get_started));
+//        //setContentView(R.layout.activity_custom_typeface);
+//        addSlide(AppIntroFragment.newInstance("Get all the best dishes.", "Within a short time", R.drawable.naivasha_hippo, Color.parseColor("#27ae60")));
+//        addSlide(AppIntroFragment.newInstance("Get a list of all the categories in each Restaurant Registered.", "Choose easily from the list' Restaurants' Categories", R.drawable.samburu_beautiful, Color.parseColor("#34495e")));
+//        addSlide(AppIntroFragment.newInstance("View all the cuisines and meals in the restaurants.", "Have a Glimpse of all foods each Restaurant  Offers", R.drawable.samburu_beautiful, Color.parseColor("#c0392b")));
+//        addSlide(AppIntroFragment.newInstance("Fill your details and make the payment.", "Experience This Smart Revolutionary and pay in your hands", R.drawable.rwanda_backets, Color.parseColor("#27ae60")));
 
         setZoomAnimation();
 //        setContentView(R.layout.activity_tutorials);
